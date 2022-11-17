@@ -1,0 +1,26 @@
+specVersion: 0.34.0
+name: hello-func-springboot
+runtime: springboot
+registry: quay.io/viraj_1
+image: quay.io/viraj_1/hello-func-springboot:latest
+imageDigest: sha256:14d337dd5968a9801d177ee9a9cf7343ac2d058fe9e7a8abda2ecbc9ee11d348
+created: 2022-11-16T18:18:29.105974121+05:30
+invocation:
+  format: http
+build:
+  buildpacks: []
+  builder: pack
+  buildEnvs:
+  - name: BP_NATIVE_IMAGE
+    value: "false"
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: viraj
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /actuator/health
+    readiness: /actuator/health
